@@ -1,35 +1,29 @@
 # PKU Tech Report LaTeX Template
 
-An unofficial LaTeX template for technical reports, preprints, and project reports, featuring the Peking University logo and a red color scheme. This template is adapted from the [Microsoft Tech Report LaTeX Template](https://github.com/lhmd/microsoft-tech-report). It is not an official Peking University template and is not endorsed by the university.
+An unofficial technical report template featuring the Peking University logo
+and a red color scheme. It is suitable for reports, preprints, and research
+notes. This project is not endorsed by Peking University.
 
-## Quick Start
+## Getting Started
 
-Upload the project to Overleaf and set `main.tex` as the main document. Alternatively, compile it locally using TeX Live or MacTeX:
+Upload the project files to Overleaf and select `main.tex` as the main file.
+To build locally with a TeX distribution and `latexmk`, run:
 
 ```sh
 latexmk -pdf -jobname=pku-tech-report main.tex
 ```
 
-The command generates the sample report as `pku-tech-report.pdf`. The required LaTeX packages are provided by your TeX distribution.
+## Customize the Report
 
-## Customization
+- Edit the title, author names, affiliations, contact, and keywords in `main.tex`.
+- Change the logo height in `\ReportHeader{figures/pku.png}{0.9cm}`.
+- Replace `\ReportTeaserPlaceholder{...}` with `\includegraphics[width=\textwidth]{...}` to display a figure.
+- Edit the abstract and other sections in `sections/`.
+- Add references to `reference.bib` and cite them with `\cite{...}`.
+- Adjust colors and typography in `pku-tech-report.sty`.
 
-- Edit the report title, authors, affiliations, correspondence email addresses, and keywords in `main.tex`. Replace all example names and addresses with your own.
-- The title page uses `figures/pku.png` by default. Adjust its size with `\techreportlogoheight{...}`. Follow the university's applicable rules when using its logo.
-- Add URLs to `\techreportmeta{Project Page}{...}` and `\techreportmeta{Code}{...}`. Fields with empty values are hidden.
-- Replace `\techreportplaceholder{...}` on the first page with `\includegraphics[width=\linewidth]{...}` to add a teaser figure, or remove the entire figure block if it is not needed.
-- Edit the abstract and report sections in `sections/`, and manage references in `reference.bib`.
-- Adjust the title, links, metadata, abstract box, and other styling in `pku-tech-report.sty`.
+## License
 
-## Files
-
-- `main.tex`: Main document and example title page.
-- `pku-tech-report.sty`: PKU-themed LaTeX style.
-- `figures/pku.png`: Peking University logo supplied with the project.
-- `sections/` and `reference.bib`: Example report sections and bibliography.
-- `pku-tech-report.pdf`: Compiled example report.
-- `NOTICE` and `LICENSE`: Attribution and license information.
-
-## Attribution and License
-
-This template is adapted from the Microsoft Tech Report LaTeX Template by Weijie Wang. The source is distributed under the LaTeX Project Public License, version 1.3c or later. See `NOTICE` and `LICENSE` for attribution and license details. Rights and usage rules for the Peking University logo are separate from the source code license.
+The template code and documentation are available under the MIT License. The
+university name and logo are excluded and may have separate usage restrictions;
+see `NOTICE`.

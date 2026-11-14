@@ -1,100 +1,41 @@
 \documentclass[11pt]{article}
-
-\usepackage{microtype}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{enumitem}
 \usepackage{pku-tech-report}
-\usepackage{hyperref}
-
 \hypersetup{
-  colorlinks=true,
-  linkcolor=pkured,
-  citecolor=pkured,
-  urlcolor=pkured,
   pdftitle={A Peking University Technical Report Template},
-  pdfauthor={First Author, Second Author},
-  pdfsubject={Technical report},
-  pdfkeywords={Peking University, technical report, latex template}
+  pdfauthor={First Author, Second Author, Third Author}
 }
-
-\techreportlabel{Technical Report}
-\techreportshorttitle{PKU Technical Report Template}
-\techreportlogoheight{0.9cm}
-
-\newcommand{\reportkeywords}{Peking University, technical report, latex template}
-
 \begin{document}
 \thispagestyle{empty}
-\enlargethispage{1.0cm}
-
-\techreportlogos{%
-  \techreportlogo{figures/pku.png}
-}%
-\techreportdate{\techreportmonthyear}
-\techreporttoprule
-
-\techreporttitle{A Peking University Technical Report Template}
-\techreportauthors{%
-  First Author$^{1,*}$ \hspace{0.7em}
-  Second Author$^{1,\ddagger}$ \hspace{0.7em}
-  Third Author$^{1,\ddagger}$%
-}{%
-  $^{1}$ Peking University%
-}
-
-\begin{center}
+\ReportHeader{figures/pku.png}{0.9cm}
+\ReportTitle{A Peking University Technical Report Template}{%
+  First Author$^{1,*}$ \quad Second Author$^{1,\dagger}$ \quad
+  Third Author$^{1,\dagger}$%
+}{${}^{1}$ Peking University}
 \begin{minipage}{\textwidth}
-  \centering
-  \techreportplaceholder{Replace this box with a teaser figure.}
-  {\captionsetup{font=scriptsize,aboveskip=0pt,belowskip=0pt}
-  \captionof{figure}{A concise teaser caption that summarizes the main idea,
-  result, or system described by the report.}
-  \label{fig:teaser}}
+  \ReportTeaserPlaceholder{Add a teaser figure here.}
+  \captionsetup{font=scriptsize,hypcap=false}
+  \captionof{figure}{A short description of the report's central idea or result.}
+  \label{fig:overview}
 \end{minipage}
-\end{center}
-
-\vspace{-0.2em}
-\begin{pkutitlebox}
-\setlength{\parindent}{0cm}
-\setlength{\parskip}{0.02cm}
-\raggedright
-\nohyphens
-
+\vspace{1em}
+\begin{ReportSummary}
 \input{sections/00_abstract}
-
-\vspace{0.08cm}
-{\setlength{\parskip}{0.1cm}\scriptsize
-\techreportmeta{Project Page}{} % Add a project URL when available.
-\techreportmeta{Correspondence}{%
-\href{mailto:second.author@example.com,third.author@example.com}{\{second.author, third.author\}@example.com}}
-\techreportmeta{Code}{} % Add a code repository URL when available.
-\techreportmeta{Keywords}{\reportkeywords}
-\techreportmeta{Date}{\techreportmonthyear}
-}
-\vspace{0.08cm}
-{\footnotesize\rmfamily\itshape\color{pkugray}
-$^*$ Equal contribution. \quad
-$^{\ddagger}$ Corresponding authors.\par
-}
-\end{pkutitlebox}
-
+\ReportInfo{Correspondence}{\href{mailto:author@example.com}{author@example.com}}
+\ReportInfo{Keywords}{Peking University, technical report, LaTeX}
+\ReportInfo{Date}{\today}
+\par{\footnotesize\itshape\color{PKUMuted}
+$^*$ Equal contribution. \quad $^{\dagger}$ Corresponding authors.}
+\end{ReportSummary}
 \clearpage
 \input{sections/01_introduction}
-\input{sections/02_related_work}
-\input{sections/03_method}
-\input{sections/04_experiments}
+\input{sections/02_background}
+\input{sections/03_approach}
+\input{sections/04_evaluation}
 \input{sections/05_conclusion}
-
 \clearpage
-\bibliographystyle{unsrtnat}
+\bibliographystyle{plain}
 \bibliography{reference}
-
 \clearpage
 \appendix
-\input{sections/07_appendix}
-
+\input{sections/06_appendix}
 \end{document}

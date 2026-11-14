@@ -1,13 +1,7 @@
-PKU Tech Report LaTeX Template (unofficial)
+PKU Tech Report is an unofficial template and is not endorsed by Peking
+University.
 
-pku-tech-report.sty and the example files are adapted from the Microsoft
-Tech Report LaTeX Template by Weijie Wang:
-https://github.com/lhmd/microsoft-tech-report
-
-Copyright (C) 2026 Weijie Wang <http://lhmd.top> (original template).
-The adapted template is distributed under the LaTeX Project Public License,
-version 1.3c or later; see LICENSE.
-
-This adaptation is not an official Peking University template. The Peking
-University name and logo in figures/pku.png are subject to their respective
-rights and usage rules, separate from the LPPL.
+The MIT license covers the template code and documentation. The Peking
+University name and the logo in figures/pku.png are excluded from that
+license and may be subject to separate rights and usage restrictions. Check
+applicable university rules before using the logo.

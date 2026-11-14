@@ -1,16 +1,11 @@
 .DS_Store
 *.aux
 *.bbl
-*.bcf
 *.blg
 *.fdb_latexmk
 *.fls
 *.log
 *.out
-main.pdf
-!pku-tech-report.pdf
-*.run.xml
 *.synctex.gz
 *.toc
-*.xdv
-_minted-*/
+main.pdf
