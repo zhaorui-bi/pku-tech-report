@@ -1,0 +1,51 @@
+% Rename the entries here; the table of contents and section headings update together.
+\newcommand{\SITitleOne}{Supplementary Methods}
+\newcommand{\SITitleTwo}{Additional Experimental Details}
+\newcommand{\SITitleThree}{Supplementary Results}
+\newcommand{\SITitleFour}{Supplementary Tables and Figures}
+\newcommand{\SITitleFive}{Supplementary References}
+\newcommand{\SIEntry}[2]{%
+  \noindent\hyperref[#2]{\ref*{#2}\enspace #1}\hfill\pageref{#2}\par\vspace{.6em}%
+}
+
+\section*{Supporting Information}
+\subsection*{Table of Contents}
+\SIEntry{\SITitleOne}{si:methods}
+\SIEntry{\SITitleTwo}{si:details}
+\SIEntry{\SITitleThree}{si:results}
+\SIEntry{\SITitleFour}{si:tables}
+\SIEntry{\SITitleFive}{si:references}
+
+% Remove or add entries and sections to match the needs of your report.
+\clearpage
+\setcounter{section}{0}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theHsection}{SI.\arabic{section}}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\figurename}{Supplementary Fig.}
+\renewcommand{\tablename}{Supplementary Table}
+\renewcommand{\theHfigure}{SI.\arabic{figure}}
+\renewcommand{\theHtable}{SI.\arabic{table}}
+\section{\SITitleOne}\label{si:methods}
+Provide supplementary procedures and methodological details.
+
+\clearpage
+\section{\SITitleTwo}\label{si:details}
+Describe additional materials, model settings, parameters, or other details.
+
+\clearpage
+\section{\SITitleThree}\label{si:results}
+Present supplementary analyses and results that support the main report.
+
+\clearpage
+\section{\SITitleFour}\label{si:tables}
+Include additional tables and figures with informative captions.
+
+\clearpage
+\section{\SITitleFive}\label{si:references}
+List any references specific to the Supporting Information here. Format and
+number these entries according to the target journal. References in this
+section are entered manually; they are separate from the main bibliography.
